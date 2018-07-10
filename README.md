@@ -6,7 +6,8 @@ SQ-Grid offers three types of grids:
 
 * CSS Grid-based
 * Flexbox-based
-* Float-based<br>
+* Float-based
+
 The grid which the browser should use is determined by @supports queries. In case the browser supports either native CSS grids or flexbox, the UI kit exposes class rules which the developer can use to manipulate the grid according to either grid or flexbox rules. In case the browser doesn't support either of those two features, the UI kit defaults to using floats to establish the grid rules.
 
 ## Usage
