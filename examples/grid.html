@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+    <title>Examples</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/sq-grid.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #4C4C4C;
+            font-family: Quicksand,sans-serif;
+            font-size: inherit;
+        }
+        body {
+            font-size: 18px;
+        }
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+        ul, ol {
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        h3, ol, ul {
+            margin-bottom: 10px;
+        }
+        article, section, .section-content {
+            padding: 10px;
+        }
+        .example-code {
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: rgba(204,204,204,0.25);
+        }
+        textarea {
+            width: 100%;
+            -webkit-appearance: none;
+            padding: 10px 15px;
+            min-height: 200px;
+            max-height: 700px;
+            border: none;
+            background: rgba(41, 182, 249, 0.14);
+            font-family: Consolas;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            margin-bottom: 35px;
+            resize: none;
+            overflow-y: auto;
+        }
+        .section-division {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body style="padding: 20px">
+    <article>
+        <header>
+            <h1>Grid system</h1>
+        </header>
+
+        <section>
+            <header>
+                <h2>Types of grid implementations</h2>
+            </header>
+
+            <div class="section-content">
+                <p>
+                    SQ-Grid offers three types of grids:
+                    <ol>
+                        <li>CSS Grid-based</li>
+                        <li>Flexbox-based</li>
+                        <li>Float-based</li>
+                    </ol>
+                </p>
+
+                <p>
+                    The grid which the browser should use is determined by <b>@supports</b> queries. In case the browser supports either native <b>CSS grids</b> or <b>flexbox</b>, the UI kit exposes class rules which the developer can use to manipulate the grid according to either grid or flexbox rules. In case the browser doesn't support either of those two features, the UI kit defaults to using floats to establish the grid rules.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <header>
+                <h2>Usage</h2>
+            </header>
+
+            <div class="section-content">
+                <p>
+                    The grid uses a maximum of <b>12 columns per row</b>. All the width calculations and corresponding classes are based on the 12-column layout.
+                </p>
+                <p>
+                    The grid consists of the following classes:
+                    <ul>
+                        <li>
+                            <b>.sq-grid</b> - The parent which wraps the grid columns. By default, it does not contain any CSS rules.
+                        </li>
+                        <li>
+                            <b>(.sq-grid).css-grid</b> - This is an additional class to <b>.sq-grid</b> which enables the usage of the <b>native CSS grid feature</b>.
+                        </li>
+                        <li>
+                            <b>(.sq-grid).css-flexbox</b> - An additional class to <b>.sq-grid</b>. It enables the <b>flexbox</b> implementation of the grid system.
+                        </li>
+                        <li>
+                            <b>(.sq-grid).auto-col-width</b> - An additional class to <b>.sq-grid</b>. When this class is added, the columns width is calculated automatically (based on 12-column layout).
+                        </li>
+                        <li>
+                            <b>.col</b> - The class for every child of the <b>.sq-grid</b> container. Represents a single column of the grid.
+                        </li>
+                        <li>
+                            <b>(.col).span-{&lt;number&gt;, where &lt;number&gt; can be an integer between 1 and 12}</b> - An additional class to <b>.col</b>. It can be used to manually set the width of box. For example, <b>.col.span-4</b> would mean that the box would span <b>4 columns</b>.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <section class="section-division">
+                <header>
+                    <h3>1. Basic usage</h3>
+                </header>
+
+                <h4>Default CSS grid implementation:</h4>
+                <div class="section-content">
+                    The default rules for the native CSS-grid implementation are the following:
+                    <ul>
+                        <li>the grid container is split into 12 columns, 1fr each</li>
+                        <li>every column spans exactly 1fr and doesn't expand to fill in the remaining space</li>
+                    </ul>
+                </div>
+
+                <div class="sq-grid css-grid example-code">
+                    <div class="col">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+                    </div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                </div>
+
+                <div class="section-content">
+                    <p>And, respectively, the code:</p>
+                </div>
+
+                <textarea readonly>
+<div class="sq-grid css-grid">
+    <div class="col">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+         Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+    </div>
+    ...
+</div>
+                    </textarea>
+
+                <h4>Default flexbox implementation:</h4>
+                <div class="section-content">
+                    <p>The default flexbox implementation formats the content according to the following rules:</p>
+                    <p>
+                        <ul>
+                            <li>every column has an ideal width of 100%/12 and expands when needed</li>
+                            <li>every column expands to fill in the remaining space if the maximum of 12 columns isn't reached</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="sq-grid css-flexbox example-code">
+                    <div class="col">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+                    </div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                </div>
+
+                <div class="section-content">
+                    <p>The code for which would be:</p>
+                </div>
+
+                <textarea readonly>
+<div class="sq-grid css-flexbox">
+    <div class="col">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+         Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+    </div>
+    ...
+</div>
+                    </textarea>
+            </section>
+
+            <section class="section-division">
+                <header>
+                    <h3>2. Automatic column calculation</h3>
+                </header>
+
+                <p style="margin-bottom: 20px">
+                    Automatic column calculation is enforced on the grid container by adding the <b>.auto-col-width</b> class. The content is formatted differently, according to the implementation of the grid layout.
+                </p>
+
+                <h4>CSS grid implementation with automatic column calculation:</h4>
+                <div class="section-content">
+                    <p>
+                        Adding the <b>.auto-col-width</b> class to the grid container will split it into 12 columns, each one with a varying width between a minimum of (100/12 * 1em) and 1fr. This will force every column to expand to fill in the remaining space inside the grid container.
+                    </p>
+                </div>
+
+                <div class="sq-grid css-grid auto-col-width example-code">
+                    <div class="col">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+                    </div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                </div>
+
+                <textarea readonly>
+<div class="sq-grid css-grid auto-col-width">
+    <div class="col">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+         Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+    </div>
+    ...
+</div>
+                </textarea>
+
+
+                <h4>Flexbox implementation with automatic column calculation:</h4>
+                <div class="section-content">
+                    <p>
+                        Adding the <b>.auto-col-width</b> class to the grid container will split it into 12 columns and the width of one column is calculated according to the total number of columns present inside the grid container.
+                    </p>
+                </div>
+
+                <div class="sq-grid css-flexbox auto-col-width example-code">
+                    <div class="col">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+                    </div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                </div>
+
+                <textarea readonly>
+<div class="sq-grid css-flexbox auto-col-width">
+    <div class="col">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+         Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+    </div>
+    ...
+</div>
+                </textarea>
+
+            </section>
+
+            <section class="section-division">
+                <header>
+                    <h3>3. Giving specific width to columns</h3>
+                </header>
+
+                <p style="margin-bottom: 20px">
+                    Whenever we need to have unevenly split columns, we can manually set their width by adding the <b>.span-&lt;number&gt;</b> class. <b>&lt;number&gt;</b> can be an integer between 1 and 12.<br>
+                    Let's say we want our content to be split into 3 boxes. We want the first box to span 6 columns, the second - 2 columns, and the third one - 4 columns.
+                </p>
+
+                <h4>CSS-grid columns with manually set width:</h4>
+                <div class="sq-grid css-grid example-code">
+                    <div class="col span-6">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+                    </div>
+                    <div class="col span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col span-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                </div>
+
+                <textarea readonly>
+<div class="sq-grid css-grid">
+    <div class="col span-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+        Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+    </div>
+    <div class="col span-2">...</div>
+    <div class="col span-4">...</div>
+</div>
+                </textarea>
+
+                <h4>Flexbox columns with manually set width:</h4>
+                <div class="sq-grid css-flexbox example-code">
+                    <div class="col span-6">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+                    </div>
+                    <div class="col span-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                    <div class="col span-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+                </div>
+
+                <textarea readonly>
+<div class="sq-grid css-flexbox">
+    <div class="col span-6">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+        Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+    </div>
+    <div class="col span-2">...</div>
+    <div class="col span-4">...</div>
+</div>
+                </textarea>
+            </section>
+
+
+        </section>
+    </article>
+</body>
+</html>
