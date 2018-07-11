@@ -1,7 +1,7 @@
 # sq-grid
 A simple and clean CSS grid which can be configured to use either CSS Grid or Flexbox.
 
-See example here: http://sq-grid.surge.sh/
+See a live preview here: http://sq-grid.surge.sh/
 
 ## Types of grid implementations
 SQ-Grid offers three types of grids:
@@ -23,5 +23,3 @@ The grid consists of the following classes:
 * <b>(.sq-grid).auto-col-width</b> - An additional class to .sq-grid. When this class is added, the columns width is calculated automatically (based on 12-column layout).
 * <b>.col</b> - The class for every child of the .sq-grid container. Represents a single column of the grid.
 * <b>(.col).span-{<number\>, where <number\> can be an integer between 1 and 12}</b> - An additional class to .col. It can be used to manually set the width of box. For example, .col.span-4 would mean that the box would span 4 columns.
-  
-For live preview and code snippets, please refer to the <b>examples</b> folder.
