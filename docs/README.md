@@ -3,7 +3,7 @@
 A simple and clean CSS grid which can be configured to use either CSS Grid or Flexbox.
 SQ-Grid is part of the SQ-UI components group.
 
-See a live preview here: http://sq-grid.surge.sh/
+See a combined live preview [here](https://sq-ui.github.io/sq-grid/examples/grid.html)
 
 ## Types of grid implementations
 
@@ -51,7 +51,7 @@ This is an additional class to .sq-grid which enables the usage of the native CS
 </div>
 ```
 
-You can see live example here: add link
+You can see live example here: [CSS Grid Example](https://sq-ui.github.io/sq-grid/examples/css-grid.html)
 
 ### <b>(.sq-grid).css-flexbox</b>
 
@@ -71,7 +71,7 @@ An additional class to .sq-grid. It enables the flexbox implementation of the gr
 </div>
 ```
 
-You can see live example here: add link.
+You can see live example here: [CSS Flexbox Example](https://sq-ui.github.io/sq-grid/examples/flexbox-grid.html)
 
 ### <b>(.sq-grid).auto-col-width</b>
 
@@ -91,7 +91,7 @@ An additional class to .sq-grid. When this class is added, the columns width is 
 </div>
 ```
 
-You can see live example here: add link.
+You can see live example here: [Auto col width Example](https://sq-ui.github.io/sq-grid/examples/auto-col-width.html)
 
 ### <b>.col</b>
 
