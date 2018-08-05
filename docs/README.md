@@ -51,15 +51,6 @@ This is an additional class to .sq-grid which enables the usage of the native CS
 </div>
 ```
 
-<div>hello {{ msg }}</div>
-
-<script>
-  new Vue({
-    el: '#main',
-    data: { msg: 'Vue' }
-  })
-</script>
-
 You can see live example here: add link
 
 ### <b>(.sq-grid).css-flexbox</b>
