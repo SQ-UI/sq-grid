@@ -1,0 +1,27 @@
+{
+  "name": "sq-grid",
+  "version": "1.0.0",
+  "description": "A simple and clean CSS grid which can be configured to use either CSS Grid or Flexbox.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "docs": "docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SQ-UI/sq-grid.git"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "scss"
+  ],
+  "author": "Plamena Radneva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SQ-UI/sq-grid/issues"
+  },
+  "homepage": "https://github.com/SQ-UI/sq-grid#readme"
+}

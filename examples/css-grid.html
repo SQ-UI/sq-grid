@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+  <title>Examples - Grid system - CSS GRID</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/sq-grid.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #4C4C4C;
+      font-family: Quicksand, sans-serif;
+      font-size: inherit;
+    }
+
+    body {
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    ul,
+    ol {
+      margin-left: 40px;
+      margin-top: 10px;
+    }
+
+    h3,
+    ol,
+    ul {
+      margin-bottom: 10px;
+    }
+
+    article,
+    section,
+    .section-content {
+      padding: 10px;
+    }
+
+    .example-code {
+      padding: 10px 20px;
+      margin: 10px 0;
+      background: rgba(204, 204, 204, 0.25);
+    }
+
+    textarea {
+      width: 100%;
+      -webkit-appearance: none;
+      padding: 10px 15px;
+      min-height: 200px;
+      max-height: 700px;
+      border: none;
+      background: rgba(41, 182, 249, 0.14);
+      font-family: Consolas;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      margin-bottom: 35px;
+      resize: none;
+      overflow-y: auto;
+    }
+
+    .section-division {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body style="padding: 20px">
+  <article>
+    <header>
+      <h1>Grid system - CSS GRID</h1>
+    </header>
+
+
+
+    <section>
+      <header>
+        <h2>Usage</h2>
+      </header>
+
+      <section class="section-division">
+        <h3>Default CSS grid implementation:</h3>
+        <div class="section-content">
+          The default rules for the native CSS-grid implementation are the following:
+          <ul>
+            <li>the grid container is split into 12 columns, 1fr each</li>
+            <li>every column spans exactly 1fr and doesn't expand to fill in the remaining space</li>
+          </ul>
+        </div>
+
+        <div class="sq-grid css-grid example-code">
+          <div class="col">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+            Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+          </div>
+          <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat
+            tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+          <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat
+            tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+          <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat
+            tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
+        </div>
+
+        <div class="section-content">
+          <p>And, respectively, the code:</p>
+        </div>
+
+        <textarea readonly>
+<div class="sq-grid css-grid">
+    <div class="col">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+         Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
+    </div>
+    ...
+</div>
+        </textarea>
+      </section>
+  </article>
+</body>
+
+</html>
