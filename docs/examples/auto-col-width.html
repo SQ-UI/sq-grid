@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="language-markup">
 
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./sq-grid.css">
+  <link rel="stylesheet" href="./styles/prism.css">
+
   <style>
     * {
       margin: 0;
@@ -126,17 +128,24 @@
           <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat
             tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
         </div>
-
-        <textarea readonly>
-<div class="sq-grid css-grid auto-col-width">
-    <div class="col">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-         Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
-         Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
-    </div>
-    ...
-</div>
-                </textarea>
+        <pre>
+        <code>
+&lt;div class=&quot;sq-grid css-grid auto-col-width&quot;&gt;
+  &lt;div class=&quot;col&quot;&gt;
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+      Architecto at dolores excepturi iure magni necessitatibus nisi nulla 
+      quam rerum sunt voluptate, voluptatum!
+  &lt;/div&gt;
+  &lt;div class=&quot;col&quot;&gt;
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+      Architecto at dolores excepturi iure magni necessitatibus nisi nulla 
+      quam rerum sunt voluptate, voluptatum!
+  &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+</pre>
 
 
         <h2>Flexbox implementation with automatic column calculation:</h2>
@@ -160,22 +169,35 @@
           <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore facere laboriosam nam reiciendis repellat
             tempora! Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!</div>
         </div>
+        <pre>
+        <code>
+&lt;div class=&quot;sq-grid css-flexbox auto-col-width&quot;&gt;
+    &lt;div class=&quot;col&quot;&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
+          Architecto at dolores excepturi iure magni necessitatibus nisi 
+          nulla quam rerum sunt voluptate, voluptatum!
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
 
-        <textarea readonly>
-<div class="sq-grid css-flexbox auto-col-width">
-    <div class="col">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-         Blanditiis dolore facere laboriosam nam reiciendis repellat tempora!
-         Architecto at dolores excepturi iure magni necessitatibus nisi nulla quam rerum sunt voluptate, voluptatum!
-    </div>
-    ...
-</div>
-                </textarea>
 
       </section>
 
     </section>
   </article>
+
+  <script src="./scripts/prism.js?v=1"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123407129-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123407129-1');
+  </script>
 </body>
 
 </html>
