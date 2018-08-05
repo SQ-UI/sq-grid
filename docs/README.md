@@ -114,3 +114,5 @@ An additional class to .col. It can be used to manually set the width of box. Fo
     </div>
 </div>
 ```
+
+You can see live examples here: [CSS and Flexbox based grid](https://sq-ui.github.io/sq-grid/examples/specific-width.html)
