@@ -1,3 +1,5 @@
+![logo](_media/sq-ui-logo.png)
+
 # SQ-Grid <small>1.0</small>
 
 > A simple and clean CSS grid. Part of the SQ-UI components group.
