@@ -16,6 +16,16 @@ SQ-Grid offers three types of grids:
 
 The grid which the browser should use is determined by @supports queries. In case the browser supports either native CSS grids or flexbox, the UI kit exposes class rules which the developer can use to manipulate the grid according to either grid or flexbox rules. In case the browser doesn't support either of those two features, the UI kit defaults to using floats to establish the grid rules.
 
+## Installation
+1. Install the package:
+`npm install @sq-ui/sq-grid`
+2. Import whatever you need:
+```
+./node_modules/@sq-ui/sq-grid/dist/sq-grid.css
+./node_modules/@sq-ui/sq-grid/mixins.scss
+./node_modules/@sq-ui/sq-grid/sq-grid.scss
+```
+
 ## Usage
 
 The grid uses a maximum of 12 columns per row. All the width calculations and corresponding classes are based on the 12-column layout.
@@ -28,3 +38,9 @@ The grid consists of the following classes:
 - <b>(.sq-grid).auto-col-width</b> - An additional class to .sq-grid. When this class is added, the columns width is calculated automatically (based on 12-column layout).
 - <b>.col</b> - The class for every child of the .sq-grid container. Represents a single column of the grid.
 - <b>(.col).span-{<number\>, where <number\> can be an integer between 1 and 12}</b> - An additional class to .col. It can be used to manually set the width of box. For example, .col.span-4 would mean that the box would span 4 columns.
+
+## Local Development
+1. Clone the repository
+2. Run `npm install`
+3. After you modify either of the scss files, you would need to run:
+`npm run build:sass`

@@ -5,6 +5,22 @@ SQ-Grid is part of the SQ-UI components group.
 
 See a combined live preview [here](https://sq-ui.github.io/sq-grid/examples/grid.html)
 
+## Installation
+1. Install the package:
+`npm install @sq-ui/sq-grid`
+2. Import whatever you need:
+```
+./node_modules/@sq-ui/sq-grid/dist/sq-grid.css
+./node_modules/@sq-ui/sq-grid/mixins.scss
+./node_modules/@sq-ui/sq-grid/sq-grid.scss
+```
+
+## Local Development
+1. Clone the repository
+2. Run `npm install`
+3. After you modify either of the scss files, you would need to run:
+`npm run build:sass`
+
 ## Types of grid implementations
 
 SQ-Grid offers three types of grids:

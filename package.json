@@ -1,27 +1,38 @@
 {
-  "name": "sq-grid",
-  "version": "1.0.0",
+  "name": "@sq-ui/sq-grid",
+  "version": "1.0.1",
+  "license": "MIT",
+  "private": false,
+  "author": "Plamena Radneva <rhythmxholic@gmail.com> (https://github.com/ardentia)",
   "description": "A simple and clean CSS grid which can be configured to use either CSS Grid or Flexbox.",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SQ-UI/sq-grid.git"
+  },
   "directories": {
     "example": "examples"
   },
   "scripts": {
-    "docs": "docsify serve docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SQ-UI/sq-grid.git"
+    "docs": "docsify serve docs",
+    "build:sass": "sass sq-grid.scss sq-grid.css",
+    "build:package": "npm run build:sass && node prepare-package.js"
   },
   "keywords": [
     "css",
     "grid",
-    "scss"
+    "scss",
+    "ui",
+    "flexbox",
+    "layout",
+    "fluid",
+    "responsive"
   ],
-  "author": "Plamena Radneva",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/SQ-UI/sq-grid/issues"
   },
-  "homepage": "https://github.com/SQ-UI/sq-grid#readme"
+  "homepage": "https://github.com/SQ-UI/sq-grid#readme",
+  "devDependencies": {
+    "fs-extra": "^7.0.1",
+    "sass": "^1.17.0"
+  }
 }
