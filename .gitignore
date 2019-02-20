@@ -1,2 +1,7 @@
 .sass-cache
 .idea
+.vscode
+package/
+sq-grid.css
+sq-grid.css.map
+node_modules/
